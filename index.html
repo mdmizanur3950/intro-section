@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/output.css" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body class="bg-veryLightGray">
+    <main class="px-6">
+      <!-- Nav element -->
+      <nav class="container mx-auto pt-6">
+        <div class="flex items-center justify-between">
+          <!-- logo -->
+          <div class="logo mr-12">
+            <img src="images/logo.svg" alt="Snap" />
+          </div>
+          <!-- Menu -->
+          <div class="menu hidden flex-row flex-1 space-x-12 lg:flex">
+            <div class="relative">
+              <button
+                type="button"
+                id="nav-btn1"
+                class="flex flex-row items-center space-x-2 group text-lightGray hover:text-darkGray"
+              >
+                <span>Features</span>
+                <img src="images/icon-arrow-down.svg" alt="" />
+              </button>
+              <div
+                id="nav-btn-menu1"
+                class="hidden absolute mt-5 right-0 transform transition-transform"
+              >
+                <div
+                  class="flex flex-col py-6 px-8 rounded-md max-w-[11rem] w-screen bg-white drop-shadow-lg space-y-3"
+                >
+                  <div class="flex items-center">
+                    <img
+                      src="images/icon-todo.svg"
+                      alt="Todo List"
+                      class="h-5 w-5 mr-4 flex-shrink-0"
+                    />
+                    <p>Todo List</p>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      src="images/icon-calendar.svg"
+                      alt="Calender"
+                      class="h-5 w-5 mr-4 flex-shrink-0"
+                    />
+                    <p>Calender</p>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      src="images/icon-reminders.svg"
+                      alt="Reminders"
+                      class="h-6 w-5 mr-4 flex-shrink-0"
+                    />
+                    <p>Reminders</p>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      src="images/icon-planning.svg"
+                      alt="Planning"
+                      class="h-5 w-5 mr-4 flex-shrink-0"
+                    />
+                    <p>Planning</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <button
+                type="button"
+                id="nav-btn2"
+                class="flex flex-row items-center space-x-2 group text-lightGray hover:text-darkGray"
+              >
+                <span>Company</span>
+                <img src="images/icon-arrow-down.svg" alt="" />
+              </button>
+              <div id="nav-btn-menu2" class="hidden absolute mt-5 right-0">
+                <div
+                  class="flex flex-col py-6 px-8 rounded-md max-w-[9rem] w-screen bg-white drop-shadow-lg space-y-3"
+                >
+                  <p>History</p>
+
+                  <p>Our team</p>
+
+                  <p>Blog</p>
+                </div>
+              </div>
+            </div>
+            <button id="nav-btn3" class="text-lightGray hover:text-darkGray">
+              Careeres
+            </button>
+            <button id="nav-btn4" class="text-lightGray hover:text-darkGray">
+              About
+            </button>
+          </div>
+
+          <!-- CTAs -->
+          <div class="cta hidden lg:flex flex-row space-x-3">
+            <div>
+              <button
+                href="#"
+                class="py-2 px-6 border-0 rounded-full text-lightGray hover:text-darkGray"
+              >
+                Login
+              </button>
+            </div>
+            <div>
+              <button
+                href="#"
+                class="border-2 py-2 px-6 rounded-full text-lightGray hover:text-darkGray border-lightGray hover:border-darkGray"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+
+          <button
+            id="hamburger-menu"
+            class="hamburger block lg:hidden focus:outline-none z-10"
+          >
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+          </button>
+        </div>
+
+        <div class="lg:hidden">
+          <div
+            id="mobile-menu"
+            class="py-20 px-12 bg-white hidden shadow-lg absolute right-0 top-0 min-h-screen w-9/12 md:w-1/3 flex-col"
+          >
+            <div class="flex flex-col space-y-6">
+              <!-- First Menu Item -->
+              <div>
+                <button
+                  type="button"
+                  id="mobileNav-btn1"
+                  class="flex flex-row items-center space-x-2 group text-lightGray hover:text-darkGray"
+                >
+                  <span>Features</span>
+                  <img src="images/icon-arrow-down.svg" alt="" />
+                </button>
+                <div id="mobile-nav-btn-menu1" class="hidden mt-4">
+                  <div class="flex flex-col pl-4 space-y-3">
+                    <div class="flex items-center opacity-80 hover:opacity-100">
+                      <img
+                        src="images/icon-todo.svg"
+                        alt="Todo List"
+                        class="h-5 w-5 mr-4 flex-shrink-0"
+                      />
+                      <p>Todo List</p>
+                    </div>
+                    <div class="flex items-center opacity-80 hover:opacity-100">
+                      <img
+                        src="images/icon-calendar.svg"
+                        alt="Calender"
+                        class="h-5 w-5 mr-4 flex-shrink-0"
+                      />
+                      <p>Calender</p>
+                    </div>
+                    <div class="flex items-center opacity-80 hover:opacity-100">
+                      <img
+                        src="images/icon-reminders.svg"
+                        alt="Reminders"
+                        class="h-6 w-5 mr-4 flex-shrink-0"
+                      />
+                      <p>Reminders</p>
+                    </div>
+                    <div class="flex items-center opacity-80 hover:opacity-100">
+                      <img
+                        src="images/icon-planning.svg"
+                        alt="Planning"
+                        class="h-5 w-5 mr-4 flex-shrink-0"
+                      />
+                      <p>Planning</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Menu Item -->
+              <div>
+                <button
+                  type="button"
+                  id="mobileNav-btn2"
+                  class="flex flex-row items-center space-x-2 group text-lightGray hover:text-darkGray"
+                >
+                  <span>Company</span>
+                  <img src="images/icon-arrow-down.svg" alt="" />
+                </button>
+                <div id="mobile-nav-btn-menu2" class="mt-5 right-0 hidden">
+                  <div class="flex flex-col ml-4 space-y-3">
+                    <p class="text-lightGray hover:text-darkGray">History</p>
+
+                    <p class="text-lightGray hover:text-darkGray">Our team</p>
+
+                    <p class="text-lightGray hover:text-darkGray">Blog</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Third Menu Item -->
+              <div>
+                <button
+                  type="button"
+                  class="text-lightGray hover:text-darkGray"
+                >
+                  Careeers
+                </button>
+              </div>
+              <!-- Fourth Menu Item -->
+              <div>
+                <button
+                  type="button"
+                  class="text-lightGray hover:text-darkGray"
+                >
+                  About
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="container mx-auto flex flex-col-reverse md:flex-row justify-center items-center pt-20 pb-12 px-0 space-x-0 lg:space-x-12 lg:px-20"
+      >
+        <!-- Left Side -->
+        <div id="left" class="w-full lg:w-1/2 text-center md:text-left">
+          <h1
+            class="text-3xl font-bold text-darkGray max-w-md mb-6 md:text-5xl lg:text-7xl"
+          >
+            Make remote work
+          </h1>
+          <p class="text-lightGray text-lg mb-12 max-w-sm">
+            Get yourteam in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.
+          </p>
+          <button
+            class="bg-darkGray text-veryLightGray py-3 px-6 rounded-lg border-2 border-transparent hover:text-darkGray hover:bg-transparent hover:border-darkGray"
+          >
+            Learn More
+          </button>
+
+          <!-- Brand Logos -->
+          <div
+            class="brands mt-14 lg:mt-28 flex flex-row justify-between max-w-lg"
+          >
+            <img
+              src="images/client-databiz.svg"
+              alt="databiz"
+              class="h-3 md:h-5"
+            />
+            <img
+              src="images/client-audiophile.svg"
+              alt="audiophile"
+              class="h-3 md:h-5"
+            />
+            <img src="images/client-meet.svg" alt="meet" class="h-3 md:h-5" />
+            <img src="images/client-maker.svg" alt="maker" class="h-3 md:h-5" />
+          </div>
+        </div>
+        <!-- Right Side -->
+        <div id="right" class="lg:flex-1 mb-8 lg:mb-0">
+          <img
+            src="images/image-hero-desktop.png"
+            alt="Image hero"
+            class="w-full lg:w-9/12"
+          />
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
